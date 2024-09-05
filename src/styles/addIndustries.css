@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.AddIndustriesForm {
+    height: 100vh;
+}
+
+.AddIndustriesForm form {
+    margin: 20px;
+    background-color: #0d1117;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.AddIndustriesForm form h1 {
+    width: fit-content;
+    font-size: 4vw;
+    margin: auto;
+    background: linear-gradient(90deg, #b721ff, #21d4fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.AddIndustriesForm form label {
+    text-transform: capitalize;
+    padding: 20px 0px 10px 0px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-family: "Epilogue", sans-serif;
+    font-weight: 600;
+}
+
+.AddIndustriesForm form input:hover {
+    cursor: text;
+}
+
+.AddIndustriesForm form input[type='text'] {
+    padding: 10px 30px;
+    font-size: 25px;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.AddIndustriesForm form textarea {
+    padding: 10px 30px;
+    font-size: 25px;
+    border-radius: 20px;
+    height: 150px;
+    resize: none;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.AddIndustriesForm input[type='text']:hover,
+textarea:hover {
+    box-shadow: 0px 0px 3px 1px #fff;
+}
+
+.AddIndustriesForm form input[type='text']:focus,
+textarea:focus {
+    box-shadow: 0px 0px 6px 3px #fff;
+}
+
+.AddIndustriesForm form .UserInputImageButton {
+    font-size: large;
+}
+
+.AddIndustriesForm form button {
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: xx-large;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #b721ff, #21d4fd);
+    margin: 20px auto;
+}
+
+.AddIndustriesForm form button:hover {
+    box-shadow: 0px 0px 5px 1px #FFF;
+    color: #fff;
+}
+
+.AddIndustriesForm form input[type='file'] {
+    width: -webkit-fill-available;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.AddIndustriesForm .userInputImageDiv {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 40px;
+    width: fit-content;
+}

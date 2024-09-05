@@ -1,0 +1,123 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.about_us_details_section {
+    padding: 60px 20px;
+}
+
+.about_us_details_section .container {
+    padding: 0 6.510416vw;
+}
+
+.about_us_details_section .container .main_title {
+    font-family: Epilogue;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 38.75px;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+
+.about_us_details_section .container .about_us_slider {
+    display: block;
+    padding: 50px 0 40px;
+}
+
+.about_us_details_section .container .main_title span {
+    background: linear-gradient(90deg, #b721ff, #21d4fd);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.about_us_details_section .container .about_us_card {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .1) .39%, hsla(0, 0%, 60%, .1) 100.39%), #0d1117;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    color: #fff;
+    margin: 0px 8px;
+}
+
+.about_us_details_section .container .about_us_card img {
+    margin-bottom: 16px;
+}
+
+.about_us_details_section .container .about_us_card p {
+    min-height: 30vh;
+}
+
+.about_us_details_section .container .about_us_card .user_details_section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.about_us_details_section .container .about_us_card .user_details_section .user_icon img {
+    background: linear-gradient(90deg, #b721ff, #21d4fd);
+    border-radius: 50%;
+    margin: 0px;
+}
+
+.about_us_details_section .container .about_us_card .user_details_section .user_details h2 {
+    font-family: Epilogue;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16.4px;
+    color: #fff;
+}
+
+.about_us_details_section .about_us_slider .slick-slider .slick-arrow:before {
+    font-size: 33px;
+}
+
+.about_us_details_section .about_us_slider .slick-slider .slick-dots li button {
+    width: 16px;
+    height: 5px;
+    padding: 0;
+    background: hsla(0, 0%, 100%, .161);
+    border-radius: 20px;
+}
+
+
+.about_us_details_section .about_us_slider .slick-slider .slick-dots li.slick-active button {
+    width: 30px;
+    height: 5px;
+    background: #fff;
+}
+
+.slick-dots li.slick-active {
+    width: 30px;
+    height: 5px;
+}
+
+.slick-dots li button:before {
+    display: none;
+}
+
+.about_us_details_section .about_us_slider .slick-slider .slick-arrow.slick-prev {
+    left: -35px;
+}
+
+.about_us_details_section .about_us_slider .slick-slider .slick-dots {
+    bottom: -60px;
+}
+
+@media only screen and (max-width: 990px) {
+    .about_us_details_section .container .about_us_card p {
+        min-height: 170px;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .about_us_details_section .container .main_title  {
+        max-width: 264px;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+}
