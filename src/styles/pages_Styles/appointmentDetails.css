@@ -63,3 +63,50 @@ th {
 .user_appointment_details .user_details .user_data .inner_user_data_div table tr .delete_button:hover {
     cursor: pointer;
 }
+
+.schedule_form_button .btn-delete-cansel {
+    background-image: linear-gradient(0deg, #fff 50%, transparent 0);
+    background-size: 100% 220%;
+    background-position: bottom;
+    transition: background-position .4s ease-in-out;
+    border: .5px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 16px;
+    font-size: 16px;
+    color: #000;
+    background-color: transparent;
+}
+
+.schedule_form_button .btn-delete-cansel:hover {
+    background-position: top;
+    color: #fff;
+}
+
+.schedule_form_button .btn-delete {
+    background-image: linear-gradient(0deg, #fc1919 50%, transparent 0);
+    background-size: 100% 220%;
+    background-position: top;
+    transition: background-position .4s ease-in-out;
+    border: .5px solid #fff;
+    border-radius: 5px;
+    padding: 20px 10px;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 16px;
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schedule_form_button .btn-delete:hover {
+    background-position: bottom;
+    color: #000;
+}
