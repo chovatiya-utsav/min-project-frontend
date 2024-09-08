@@ -95,8 +95,9 @@ const AddIndustries = () => {
                         });
                         console.log(response.data);
                         const data = await response.data;
-                        console.log("exists", data.msg);
-                        if (data.msg === "Industry already exists") {
+                        console.log("exists", data);
+                        if (data.status === 403) {
+                            console.log('s', data.msg)
                             toggalModal("Industry already exists", values.industriesTitle);
                             actions.resetForm();
                             setindustriesImageurl(null); // Reset the image preview
