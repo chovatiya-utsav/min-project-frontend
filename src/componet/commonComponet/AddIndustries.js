@@ -3,11 +3,15 @@ import React, { useRef, useState } from 'react'
 import '../../styles/addIndustries.css';
 import * as Yup from 'yup';
 import axios from 'axios';
+import AddIndustriesDataBaseResponseModal from './AddIndustriesDataBaseResponseModal';
 
 const AddIndustries = () => {
     const [industriesImageurlError, setindustriesImageurlError] = useState(null);
     const [industriesImageurl, setindustriesImageurl] = useState(null);
-    const [fileObject, setFileObject] = useState(null)
+    const [fileObject, setFileObject] = useState(null);
+    const [response, setResponse] = useState(false);
+    const [modalContent, setModalContent] = useState(null);
+    const [industriesName, setIndustriesName] = useState(null);
 
     const handleAutoResize = (e) => {
         e.target.style.height = 'auto'; // Reset height
@@ -45,8 +49,16 @@ const AddIndustries = () => {
         }
     }
 
+    const toggalModal = (responseName, industriesName) => {
+        setResponse(!response);
+        setModalContent(responseName);
+        setIndustriesName(industriesName);
+
+    }
+
+
     const validationSchema = Yup.object().shape({
-        industriesTitle: Yup.string().required('Title is required').min(10, 'Title is too short'),
+        industriesTitle: Yup.string().required('Title is required').min(5, 'Title is too short'),
         industriesTitleDetail: Yup.string().required('Detail is required').min(20, 'Detail is too short'),
     });
     return (
@@ -66,7 +78,7 @@ const AddIndustries = () => {
                     }
                     return errors;
                 }}
-                onSubmit={async (values) => {
+                onSubmit={async (values, actions) => {
 
                     const formData = new FormData();
                     formData.append('title', values.industriesTitle);
@@ -82,6 +94,23 @@ const AddIndustries = () => {
                             },
                         });
                         console.log(response.data);
+                        const data = await response.data;
+                        console.log("exists", data.msg);
+                        if (data.msg === "Industry already exists") {
+                            toggalModal("Industry already exists", values.industriesTitle);
+                            actions.resetForm();
+                            setindustriesImageurl(null); // Reset the image preview
+                            setFileObject(null); // Reset the file object
+
+                        } else {
+                            console.log("successfully", data);
+                            toggalModal("Industry successfully submited", values.industriesTitle);
+                            actions.resetForm();
+                            setindustriesImageurl(null); // Reset the image preview
+                            setFileObject(null); // Reset the file object
+                        }
+
+
                     } catch (error) {
                         console.error('Error uploading image:', error);
                     }
@@ -143,12 +172,16 @@ const AddIndustries = () => {
 
                         {errors.industriesTitleDetail && touched.industriesTitleDetail && <span className='error'>{errors.industriesTitleDetail}</span>}
 
-                        <button type="submit" disabled={isSubmitting}>
+                        <button type="submit" >
                             add industries
                         </button>
                     </Form>
                 )}
             </Formik>
+
+            <div className='user-response'>
+                <AddIndustriesDataBaseResponseModal open={response} toggalModal={toggalModal} modalContent={modalContent} industriesName={industriesName} />
+            </div>
         </div>
     )
 }
