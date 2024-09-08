@@ -2,10 +2,12 @@ import { Field, Form, Formik } from 'formik';
 import React, { useRef, useState } from 'react'
 import '../../styles/addIndustries.css';
 import * as Yup from 'yup';
+import axios from 'axios';
 
 const AddIndustries = () => {
     const [industriesImageurlError, setindustriesImageurlError] = useState(null);
     const [industriesImageurl, setindustriesImageurl] = useState(null);
+    const [fileObject, setFileObject] = useState(null)
 
     const handleAutoResize = (e) => {
         e.target.style.height = 'auto'; // Reset height
@@ -14,8 +16,10 @@ const AddIndustries = () => {
 
     const fileRef = useRef();
 
+
     const fileUploadFolderHandle = async (event) => {
         const file = event.target.files[0];
+        setFileObject(file);
         if (file) {
             const validFileTypes = ['image/jpeg', 'image/jpg', 'image/png'];
             const isValidFileType = validFileTypes.includes(file.type);
@@ -23,7 +27,7 @@ const AddIndustries = () => {
                 setindustriesImageurlError('Please upload a valid image file (jpg, jpeg, png).');
                 return;
             }
-            if (file.size < 200000 && isValidFileType) {
+            if (file.size < 500000 && isValidFileType) {
                 event.preventDefault();
                 const reader = new FileReader();
                 reader.onloadend = () => {
@@ -36,7 +40,7 @@ const AddIndustries = () => {
                 console.log("big file")
 
                 setindustriesImageurl(null);
-                setindustriesImageurlError("Image size should be less than 200 KB.");
+                setindustriesImageurlError("Image size should be less than 500 KB.");
             }
         }
     }
@@ -52,29 +56,35 @@ const AddIndustries = () => {
                     {
                         industriesTitle: '',
                         industriesTitleDetail: '',
-                        industriesImageurl: industriesImageurl
+                        industriesImageurl: fileObject
                     }}
                 validationSchema={validationSchema}
                 validate={(values) => {
                     const errors = {};
-                    if (!industriesImageurl) {
+                    if (!fileObject) {
                         setindustriesImageurlError("Case Study image is Required.");
                     }
                     return errors;
                 }}
-                onSubmit={(values, { setSubmitting }) => {
-                    const alldata = {
-                        ...values,
-                        industriesImageurl: industriesImageurl
+                onSubmit={async (values) => {
+
+                    const formData = new FormData();
+                    formData.append('title', values.industriesTitle);
+                    formData.append('description', values.industriesTitleDetail);
+                    formData.append('image', fileObject); // Append the image
+
+                    console.log(formData);
+
+                    try {
+                        const response = await axios.post('http://localhost:5000/api/upload', formData, {
+                            headers: {
+                                'Content-Type': 'multipart/form-data',
+                            },
+                        });
+                        console.log(response.data);
+                    } catch (error) {
+                        console.error('Error uploading image:', error);
                     }
-
-                    // const stringify = JSON.stringify(alldata);
-
-                    // alert(stringify);
-                    setTimeout(() => {
-                        alert(JSON.stringify(alldata, null, 2));
-                        setSubmitting(false);
-                    }, 400);
                 }}
             >
                 {({
@@ -88,7 +98,7 @@ const AddIndustries = () => {
                     setFieldValue
                     /* and other goodies */
                 }) => (
-                    <Form onSubmit={handleSubmit}>
+                    <Form onSubmit={handleSubmit} >
                         <h1>Add industries</h1>
                         <label >Enter Youer Title :</label>
                         <Field
@@ -103,7 +113,7 @@ const AddIndustries = () => {
                         <div className='userInputImageDiv'>
                             <input hidden
                                 ref={fileRef}
-                                name="CaseStudyTitleImage"
+                                name="image"
                                 type="file"
                                 id="user-image"
                                 accept=".jpg,.jpeg,.png"
