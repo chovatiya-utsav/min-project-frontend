@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/DisplayIndustries.css';
 import axios from 'axios';
-import moment from 'moment';
+
 
 
 function DisplayIndustries() {
@@ -34,6 +34,8 @@ function DisplayIndustries() {
                                             <img
                                                  src={`http://localhost:5000/public/image/${data?.indestryImage}`}
                                                 alt={data.title}
+                                                width={20}
+                                                height={20}
                                             />
                                         </div>
                                         <div className='list_details'>

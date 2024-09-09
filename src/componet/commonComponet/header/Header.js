@@ -20,6 +20,7 @@ const Hader = () => {
                         <li><NavLink to="/AddCaseStdies ">Add CaseStudies</NavLink></li>
                         <li><NavLink to="/Industries">industries</NavLink></li>
                         <li><NavLink to="/AppointmentDetails">Appointment</NavLink></li>
+                        <li><NavLink to="/IndustriesDetails">IndustriesDetails</NavLink></li>
                     </ul>
                     <i className="fa fa-bars" aria-hidden="true" onClick={() => setOpenMenu(true)}></i>
                 </div>
