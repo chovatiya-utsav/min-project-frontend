@@ -3,7 +3,10 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import '../../styles/AddCaseStudy.css';
 import { Modal } from 'react-bootstrap';
 import * as Yup from 'yup';
+import AddCaseStudyBaseResponseModal from './AddCaseStudyBaseResponseModal';
 const AddCaseStudy = () => {
+
+
     const [deleteModalOpen, setDeleteModalOpen] = useState(false);
     const [deleteRecoedName, setDeleteRecoedName] = useState(null);
     const [resultToDeleteIndex, setResultToDeleteIndex] = useState(null);
@@ -13,6 +16,7 @@ const AddCaseStudy = () => {
     const [CaseStudySolutionImageurl, setCaseStudySolutionImageurl] = useState(null);
     const [CaseStudyResultImageError, setCaseStudyResultImageError] = useState(null);
     const [CaseStudyResultImageurl, setCaseStudyResultImageurl] = useState(null);
+    const [response, setResponse] = useState(false);
     const [caseStudiesResultsData, setcaseStudiesResultsData] = useState([{
         title: "",
         description: ""
@@ -285,6 +289,10 @@ const AddCaseStudy = () => {
         ),
     });
 
+    const toggalModal = () => {
+        setResponse(!response);
+    }
+
     return (
         <>
             <Formik
@@ -344,10 +352,27 @@ const AddCaseStudy = () => {
                     console.log("caseStudiesResultsData0", caseStudiesResultsData)
                     console.log('s', allData);
                     const strigifyData = JSON.stringify(allData);
-                    alert(strigifyData);
+                    // alert(strigifyData);
                     setTimeout(() => {
-                        actions.setSubmitting(false);
-                    }, 1000);
+                        // actions.setSubmitting(false);
+                        actions.resetForm();
+                        setCaseStudyTitleImageurl(null);
+                        setCaseStudySolutionImageurl(null);
+                        setCaseStudyResultImageurl(null);
+                        setcaseStudiesResultsData([{
+                            title: "",
+                            description: ""
+                        }]);
+                        setcaseStudiesProblemData([{
+                            title: "",
+                            description: ""
+                        }]);
+                        setcaseStudiesSolutionData([{
+                            title: "",
+                            description: ""
+                        }])
+                    }, 1);
+                    toggalModal();
                 }}
             >
                 {({ handleChange, values, errors, touched, setFieldValue }) => (
@@ -635,7 +660,7 @@ const AddCaseStudy = () => {
                         <button type="submit">Add Casestudy</button>
                     </Form>
                 )}
-            </Formik>
+            </Formik >
             <section className='cancel_Modal'>
                 <Modal
                     show={deleteModalOpen}
@@ -664,6 +689,9 @@ const AddCaseStudy = () => {
                     </Modal.Footer>
                 </Modal>
             </section>
+            <div className='user-response'>
+                <AddCaseStudyBaseResponseModal open={response} toggalModal={toggalModal} />
+            </div>
         </>
     )
 }

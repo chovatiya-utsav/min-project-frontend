@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FrequentlyAskedQuestions from '../commonComponet/FrequentlyAskedQuestions';
 import '../../styles/pages_Styles/home.css';
 import ClientsAboutUs from '../commonComponet/ClientsAboutUs';
@@ -7,6 +7,7 @@ import DisplayIndustries from '../commonComponet/DisplayIndustries';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import RegistrationModal from '../commonComponet/RegistrationModal';
 
 const Home = () => {
 
@@ -28,8 +29,33 @@ const Home = () => {
         autoplaySpeed: 1,
         cssEase: "linear"
     };
+
+    const [RegistrationModalOpen, setRegistrationModalOpen] = useState(false);
+    const [appointment, setAppointment] = useState(null);
+
+    const openModal = () => {
+        setRegistrationModalOpen(true);
+        setAppointment(1)
+    }
+
+    const closeModal = () => {
+        setRegistrationModalOpen(!RegistrationModalOpen);
+    }
+
+
     return (
         <div>
+            <section className='banner_section'>
+                <div className='banner_content'>
+                    <div className='banner_inner_div'>
+                        <img src="./images/logo.png" alt="logo" width={178} height={60} />
+                        <h1>The Map Intelligence</h1>
+                        <h6>We offer a complete suite of tools and features to streamline field force management effortlessly.</h6>
+                        <button className='btn_primary btn_sheduled' type='button' onClick={() => openModal()}>Schedule An Appointment</button>
+                    </div>
+
+                </div>
+            </section>
             <section className='brand_trust_section'>
                 <div className='brand_logos_slider'>
                     <Slider {...brandlogosettings}>
@@ -102,6 +128,8 @@ const Home = () => {
             <Registration />
             <ClientsAboutUs />
             <FrequentlyAskedQuestions />
+            <RegistrationModal ModalOpen={RegistrationModalOpen} closeModal={closeModal} appointment={appointment} />
+
         </div>
     )
 }
