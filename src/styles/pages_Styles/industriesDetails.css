@@ -48,6 +48,7 @@ th {
 .industries_details .industries .industries_data .inner_industries_data_div table tr td .industries_detail_data {
     text-align: left;
     padding: 0px 0px 0px 20px;
+    cursor: pointer;
 }
 .industries_details .industries .industries_data .inner_industries_data_div table tr td .industries_detail_data p{
     text-transform: lowercase;

@@ -7,6 +7,7 @@ import axios from 'axios';
 function DisplayIndustries() {
 
     const [industries, setIndustries] = useState([]);
+    const [industriyActive, setIndustriyActive] = useState(null)
 
     useEffect(() => {
         const fetchIndustries = async () => {
@@ -20,6 +21,13 @@ function DisplayIndustries() {
 
         fetchIndustries();
     }, []);
+
+
+    const displaydetail = (index) => {
+        setIndustriyActive(index)
+
+    }
+
     return (
         <section className='our_target_section'>
             <div className='container'>
@@ -29,10 +37,14 @@ function DisplayIndustries() {
                         {industries ?
                             industries.map((data, index) => {
                                 return (
-                                    <div className='target_list_box active ' key={index}>
+                                    <div
+                                        className={`target_list_box ${industriyActive === index ? "active" : "deactivate"} `}
+                                        key={index}
+                                        onClick={() => displaydetail(index)}
+                                    >
                                         <div className='target_icons'>
                                             <img
-                                                 src={`http://localhost:5000/public/image/${data?.indestryImage}`}
+                                                src={`http://localhost:5000/public/image/${data?.indestryImage}`}
                                                 alt={data.title}
                                                 width={20}
                                                 height={20}
