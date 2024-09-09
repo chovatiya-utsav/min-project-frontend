@@ -4,6 +4,18 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Hader = () => {
     const [openMenu, setOpenMenu] = useState(false);
+    const [addDropDwonopen, setAddDropDwonopen] = useState(false)
+    const [viewDropDwonopen, setViewDropDwonopen] = useState(false)
+
+    const handeladdDropdwon = () => {
+        setAddDropDwonopen(!addDropDwonopen);
+        setViewDropDwonopen(false);
+    }
+    const handelviewDropdwon = () => {
+        setAddDropDwonopen(false);
+        setViewDropDwonopen(!viewDropDwonopen);
+    }
+
     return (
         <header className='header'>
             <div className='navebar'>
@@ -17,10 +29,25 @@ const Hader = () => {
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/Features">Features</NavLink></li>
                         <li><NavLink to="/CaseStudy">Case Studies</NavLink></li>
-                        <li><NavLink to="/AddCaseStdies ">Add CaseStudies</NavLink></li>
-                        <li><NavLink to="/Industries">industries</NavLink></li>
-                        <li><NavLink to="/AppointmentDetails">Appointment</NavLink></li>
-                        <li><NavLink to="/IndustriesDetails">IndustriesDetails</NavLink></li>
+                        <div className="dropdown">
+                            <span className="dropbtn" onClick={() => handeladdDropdwon()}>Add
+                            </span>
+                            <i className="fa fa-caret-down" aria-hidden="true" id='icone'></i>
+                            <div className={`dropdown-content ${addDropDwonopen ? "openAdd" : "closeAdd"} `}>
+                                <NavLink to="/AddCaseStdies" onClick={() => handeladdDropdwon()}>Add CaseStudies</NavLink>
+                                <NavLink to="/Industries" onClick={() => handeladdDropdwon()}>industries</NavLink>
+                            </div>
+                        </div>
+                        <div className="dropdown">
+                            <span className="dropbtn" onClick={() => handelviewDropdwon()}>view
+                            </span>
+                            <i className="fa fa-caret-down" aria-hidden="true" id='icone'></i>
+                            <div className={`dropdown-content ${viewDropDwonopen ? "openView" : "closeView"} `}>
+                                <NavLink to="/AppointmentDetails" onClick={() => handelviewDropdwon()}>Appointment</NavLink>
+                                <NavLink to="/IndustriesDetails" onClick={() => handelviewDropdwon()}>IndustriesDetails</NavLink>
+                            </div>
+                        </div>
+
                     </ul>
                     <i className="fa fa-bars" aria-hidden="true" onClick={() => setOpenMenu(true)}></i>
                 </div>

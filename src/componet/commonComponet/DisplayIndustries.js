@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../../styles/DisplayIndustries.css';
 import axios from 'axios';
 
@@ -22,11 +22,28 @@ function DisplayIndustries() {
         fetchIndustries();
     }, []);
 
+    const timeoutRef = useRef(null);
 
-    const displaydetail = (index) => {
-        setIndustriyActive(index)
+    // Function to handle the auto-cycling through industries
+    const cycleIndustries = () => {
+        timeoutRef.current = setTimeout(() => {
+            setIndustriyActive((prevIndex) => (prevIndex + 1) % industries.length);
+        }, 25000);
+    };
 
-    }
+    // Run cycleIndustries whenever the active industry changes
+    useEffect(() => {
+        if (industries.length > 0) {
+            cycleIndustries();
+        }
+        return () => clearTimeout(timeoutRef.current); // Clean up on unmount or index change
+    }, [industriyActive, industries]);
+
+    // Handle user interaction
+    const displayDetail = (index) => {
+        clearTimeout(timeoutRef.current); // Stop the current timeout
+        setIndustriyActive(index); // Set the clicked industry as active
+    };
 
     return (
         <section className='our_target_section'>
@@ -40,7 +57,7 @@ function DisplayIndustries() {
                                     <div
                                         className={`target_list_box ${industriyActive === index ? "active" : "deactivate"} `}
                                         key={index}
-                                        onClick={() => displaydetail(index)}
+                                        onClick={() => displayDetail(index)}
                                     >
                                         <div className='target_icons'>
                                             <img

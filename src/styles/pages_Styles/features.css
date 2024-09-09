@@ -1,0 +1,260 @@
+.feture_banner_section {
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: relative;
+}
+
+.feture_banner_section .banner_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: radial-gradient(63.89% 100% at 50% 100%, rgba(13, 17, 23, 0) 18.14%, #0d1117 100%), linear-gradient(180deg, rgba(13, 17, 23, 0) 69.5%, #0d1117), linear-gradient(90deg, rgba(183, 33, 255, .8) 6.12%, rgba(33, 212, 253, .8) 61.75%);
+
+}
+
+.feture_banner_section .banner_content .banner_inner_div {
+    display: block;
+    text-align: center;
+    padding-bottom: 20vh;
+}
+
+
+.feture_banner_section .banner_content .banner_inner_div h1 {
+    font-family: Epilogue;
+    font-weight: 500;
+    font-size: 64px;
+    color: #fff;
+    line-height: 65px;
+    margin: 0 0 12px;
+}
+
+.feture_banner_section .banner_content .banner_inner_div h6 {
+    font-weight: 300;
+    font-size: 16px;
+    color: #eee;
+    line-height: 21px;
+    margin: 0 0 60px;
+}
+
+.feture_banner_section .banner_content .banner_inner_div h6 {
+    font-weight: 300;
+    font-size: 16px;
+    color: #eee;
+    line-height: 21px;
+    margin: 0 0 60px;
+}
+
+.feture_banner_section .bottom_img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: linear-gradient(180deg, transparent, #000);
+}
+
+.expand_section {
+    padding: 80px 0;
+}
+
+.main_title {
+    font-family: Epilogue;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 38.75px;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+
+.expand_section .for_desktop_expand {
+    display: block;
+}
+
+.expand_section .expand_data_div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.expand_section .expand_data_div .expand_number {
+    max-width: 300px;
+    text-align: center;
+}
+
+.expand_section .expand_data_div .expand_number h2 {
+    margin: 0;
+    font-family: Epilogue;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 41px;
+    color: #fff;
+}
+
+.expand_section .expand_data_div .expand_number h6 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.6px;
+    color: #fff;
+}
+
+.expand_section .expand_usp_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.expand_section .expand_usp_section .usp_box {
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    padding: 10px;
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .1) .39%, hsla(0, 0%, 60%, .1) 100.39%), #0d1117;
+}
+
+.expand_section .expand_usp_section .usp_box .inner_div {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.expand_section .expand_usp_section .usp_box .inner_div img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 10px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.monitor_location_section {
+    display: block;
+    padding: 80px 0;
+}
+
+.monitor_location_section .monitor_location_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.monitor_location_section .monitor_location_box .monitor_img {
+    display: block;
+    text-align: center;
+    width: 48%;
+}
+
+.monitor_location_section .monitor_location_box .monitor_img img {
+    width: 100% !important;
+    max-width: 560px;
+    height: 100% !important;
+}
+
+.monitor_location_section .monitor_location_box .monitor_details_section {
+    max-width: 590px;
+    margin: 0 auto;
+    width: 48%;
+}
+
+.monitor_location_section .monitor_location_box .monitor_details_section h2 {
+    font-family: Epilogue;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 0 0 16px;
+    color: #fff;
+}
+
+.monitor_location_section .monitor_location_box .monitor_details_section h3 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    margin: 0 0 30px;
+    color: hsla(0, 0%, 100%, .8);
+}
+
+.monitor_location_section .monitor_location_box .monitor_details_section .monitor_steps {
+    display: block;
+}
+
+.monitor_location_section .monitor_location_box .monitor_details_section .monitor_steps .steps_box {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.monitor_location_section .monitor_location_box .monitor_details_section .monitor_steps .steps_box .step_number {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .1) .39%, hsla(0, 0%, 60%, .1) 100.39%), #0d1117;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.monitor_location_section .monitor_location_box .monitor_details_section .monitor_steps .steps_box .step_number h6 {
+    margin: 0;
+    font-family: Epilogue;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36.9px;
+    background: linear-gradient(90deg, #b721ff, #21d4fd);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.monitor_location_section .monitor_location_box .monitor_details_section .monitor_steps .steps_box .steps_details {
+    width: calc(100% - 80px);
+}
+
+.monitor_location_section .monitor_location_box .monitor_details_section .monitor_steps .steps_box .steps_details h4 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+    margin: 0;
+    color: #fff;
+    padding: 0px;
+}
+
+.monitor_location_section .monitor_location_box .monitor_details_section .monitor_steps .steps_box .steps_details h5 {
+    color: #797979;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.monitor_location_section .monitor_location_box:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.monitor_location_section .monitor_location_box .monitor_img img.small_size_img {
+    max-width: 370px !important;
+}
+
+.brand_trust_section {
+    display: block;
+    padding: 80px 0;
+}
+
+.brand_trust_section .brand_logos_slider {
+    margin-top: 40px;
+}
+
+.monitor_location_section .monitor_location_box .monitor_img {
+    display: block;
+    text-align: center;
+    width: 48%;
+}

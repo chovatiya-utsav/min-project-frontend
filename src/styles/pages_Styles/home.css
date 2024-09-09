@@ -1,0 +1,44 @@
+.our_value_section .our_value_box .our_value_card {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .1) .39%, hsla(0, 0%, 60%, .1) 100.39%), #0d1117;
+    max-width: calc(100% - 20px);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.our_value_section .our_value_box .our_value_card .image_div {
+    width: 72px;
+    height: 72px;
+    background: rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+.our_value_section .our_value_box .our_value_card h3 {
+    font-family: Epilogue;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20.5px;
+    color: #fff;
+    margin: 0 0 16px;
+}
+
+.our_value_section .our_value_box .our_value_card p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.9px;
+    color: #797979;
+    margin: 0;
+}
+
+.our_value_section .our_value_box {
+    margin-top: 40px;
+}
+
+.our_value_section .our_value_box .our_value_card {
+    height: auto;
+    min-height: 210px;
+}
+
