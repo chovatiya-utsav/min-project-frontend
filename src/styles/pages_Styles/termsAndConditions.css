@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content_of_policy {
+    display: block;
+    padding: 80px 0;
+}
+
+.container {
+    padding: 0 6.510416vw;
+}   
+
+.content_of_policy h1, .content_of_policy h2 {
+    font-family: Epilogue;
+    font-weight: 600;
+    color: #fff;
+}
+
+.content_of_policy h1 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    margin: 0 0 30px;
+    background: linear-gradient(90deg, #b721ff, #21d4fd);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.content_of_policy p {
+    font-family: Satoshi-regular;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28.6px;
+    color: #fff;
+    margin: 0;
+}
+
+.content_of_policy ul {
+    color: #fff;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+.content_of_policy p {
+    font-family: Satoshi-regular;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28.6px;
+    color: #fff;
+    margin: 0;
+}

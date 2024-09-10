@@ -18,8 +18,8 @@ const Footer = () => {
                     </div>
                     <div className='menu_container'>
                         <div className='menus'>
-                            <Link to={"#"}>Privacy Policy</Link>
-                            <Link to={"#"} >Terms & Conditions</Link>
+                            <Link to={"/PrivacyPolicy"}>Privacy Policy</Link>
+                            <Link to={"/TermsAndConditions"} >Terms & Conditions</Link>
                         </div>
                     </div>
                 </div>

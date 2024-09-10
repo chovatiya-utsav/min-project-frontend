@@ -12,6 +12,8 @@ import AppointmentDetails from '../../pages/AppointmentDetails';
 import Features from '../../pages/Features';
 import IndustriesDetails from '../../pages/IndustriesDetails';
 import ScrollToTop from '../ScrollToTop';
+import PrivacyPolicy from '../../pages/PrivacyPolicy';
+import TermsAndConditions from '../../pages/TermsAndConditions';
 
 const Layout = () => {
     return (
@@ -29,6 +31,8 @@ const Layout = () => {
                     <Route path='/AddCaseStdies' element={<AddCaseStudy />} />
                     <Route path='/AppointmentDetails' element={<AppointmentDetails />} />
                     <Route path='/IndustriesDetails' element={<IndustriesDetails />} />
+                    <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
+                    <Route path='/TermsAndConditions' element={<TermsAndConditions />} />
                 </Routes>
                 <Footer />
                 <ScrollToTop />

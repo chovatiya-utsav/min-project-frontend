@@ -140,21 +140,21 @@ const Home = () => {
                         <Slider {...settings}>
                             <div className='our_value_card'>
                                 <div className='image_div'>
-                                    <img src="https://www.intelomatic.ai/images/value-icon-2.svg" alt="" width={35} height={35} />
+                                    <img src="./images/corevalues/value-icon-2.png" alt="" width={35} height={35} />
                                 </div>
                                 <h3>GPS based distance measurement </h3>
                                 <p>Utilizing GPS from the users mobile device for precise distance measurement.</p>
                             </div>
                             <div className='our_value_card'>
                                 <div className='image_div'>
-                                    <img src="https://www.intelomatic.ai/images/value-icon-1.svg" alt="" width={35} height={35} />
+                                    <img src="./images/corevalues/value-icon-1.png" alt="" width={35} height={35} />
                                 </div>
                                 <h3>Real-time tracking  </h3>
                                 <p>Track people, vehicles or goods on a real time basis on our custom maps.</p>
                             </div>
                             <div className='our_value_card'>
                                 <div className='image_div'>
-                                    <img src="https://www.intelomatic.ai/images/value-icon-3.svg" alt="" width={35} height={35} />
+                                    <img src="./images/corevalues/value-icon-3.png" alt="" width={35} height={35} />
                                 </div>
                                 <h3>Leverage form builder  </h3>
                                 <p>Comprehensive field reports with data, images, videos and documents.</p>
