@@ -5,6 +5,7 @@ import '../../styles/pages_Styles/caseStudy.css'
 import DisplayCaseStudies from '../commonComponet/DisplayCaseStudies';
 
 const CaseStudy = () => {
+    
     return (
         <div>
             <section className='case_studies_banner'>

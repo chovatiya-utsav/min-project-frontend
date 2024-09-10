@@ -72,6 +72,9 @@
     background-position: top;
 }
 
+.our_value_section{
+    padding: 80px 0px 0px 0px;
+}
 
 .our_value_section .our_value_box .our_value_card {
     background: linear-gradient(180deg, hsla(0, 0%, 100%, .1) .39%, hsla(0, 0%, 60%, .1) 100.39%), #0d1117;

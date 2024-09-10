@@ -1,11 +1,17 @@
+import { useEffect } from 'react';
 import Layout from './componet/commonComponet/layout/Layout';
 import './styles/app.css'
 
 function App() {
 
+  useEffect(() => {
+    scrollToTop();
+  }, [])
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
 
   return (
     <>

@@ -50,18 +50,20 @@ th {
     padding: 0px 0px 0px 20px;
     cursor: pointer;
 }
-.industries_details .industries .industries_data .inner_industries_data_div table tr td .industries_detail_data p{
+
+.industries_details .industries .industries_data .inner_industries_data_div table tr td .industries_detail_data p {
     text-transform: lowercase;
     font-size: 15px;
     padding: 12px;
     color: #d0c9c9;
 }
 
-.industries_details .industries .industries_data .inner_industries_data_div table tr td .industries_detail_data.close p{
-   display: none;
+.industries_details .industries .industries_data .inner_industries_data_div table tr td .industries_detail_data.close p {
+    display: none;
 }
-.industries_details .industries .industries_data .inner_industries_data_div table tr td .industries_detail_data.open p{
-   display: block;
+
+.industries_details .industries .industries_data .inner_industries_data_div table tr td .industries_detail_data.open p {
+    display: block;
 }
 
 .industries_details .industries .industries_data .inner_industries_data_div table tr td button {
@@ -82,6 +84,10 @@ th {
 
 .industries_details .industries .industries_data .inner_industries_data_div table tr .delete_button:hover {
     cursor: pointer;
+}
+
+.industries_details .industries .industries_data .inner_industries_data_div table tr .delete_button {
+    width: 80px;
 }
 
 .schedule_form_button .btn-delete-cansel {

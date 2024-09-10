@@ -87,9 +87,9 @@ function IndustriesDetails() {
                     userData.map((data, index) => {
                       return (
                         <tr key={index}>
-                          <td>{index + 1}</td>
-                          <td>
-                            <div className='industries_image'>
+                          <td style={{ width: "50px" }}>{index + 1}</td>
+                          <td style={{ width: "100px" }}>
+                            <div className='industries_image' >
                               <img
                                 src={`http://localhost:5000/public/image/${data?.indestryImage}`}
                                 alt={data.title}

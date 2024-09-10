@@ -11,11 +11,13 @@ import AddCaseStudy from '../AddCaseStudy';
 import AppointmentDetails from '../../pages/AppointmentDetails';
 import Features from '../../pages/Features';
 import IndustriesDetails from '../../pages/IndustriesDetails';
+import ScrollToTop from '../ScrollToTop';
 
 const Layout = () => {
     return (
         <div className='body'>
             <BrowserRouter>
+                <ScrollToTop />
                 <Header />
                 <Routes>
                     <Route path="/*" element={<Home />} />
@@ -29,6 +31,7 @@ const Layout = () => {
                     <Route path='/IndustriesDetails' element={<IndustriesDetails />} />
                 </Routes>
                 <Footer />
+                <ScrollToTop />
             </BrowserRouter>
         </div>
     )

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { Formik, Field, Form } from 'formik';
 import '../../styles/AddCaseStudy.css';
 import { Modal } from 'react-bootstrap';
 import * as Yup from 'yup';
@@ -351,7 +351,8 @@ const AddCaseStudy = () => {
                     };
                     console.log("caseStudiesResultsData0", caseStudiesResultsData)
                     console.log('s', allData);
-                    const strigifyData = JSON.stringify(allData);
+                    // const strigifyData = JSON.stringify(allData);
+                    // console.log(strigifyData)
                     // alert(strigifyData);
                     setTimeout(() => {
                         // actions.setSubmitting(false);
