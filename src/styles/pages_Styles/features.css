@@ -258,3 +258,71 @@
     text-align: center;
     width: 48%;
 }
+
+
+.other_features_section .other_features_slider .slick-slider .slick-list .slick-track .slick-slide>div:first-child {
+    margin: 0 12px;
+}
+
+.other_features_section .other_features_slider .features_card {
+    min-height: 312px;
+}
+
+.other_features_section .other_features_slider .features_card .feature_main_img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 16px;
+}
+
+.other_features_section .other_features_slider .features_card .features_details {
+    text-align: center;
+}
+
+.other_features_section .other_features_slider .features_card .features_details h2 {
+    margin: 0 0 16px;
+    font-family: Epilogue;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20.5px;
+    color: #fff;
+    height: 41px;
+}
+
+.other_features_section .other_features_slider .features_card .features_details p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.9px;
+    margin: 0;
+    color: #797979;
+}
+
+.other_features_section .other_features_slider .features_card {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .1) .39%, hsla(0, 0%, 60%, .1) 100.39%), #0d1117;
+    padding: 20px;
+    border-radius: 20px;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    cursor: pointer;
+    height: auto;
+    min-height: 363px;
+}
+
+.other_features_section .other_features_slider .features_card .feature_main_img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 16px;
+}
+
+.other_features_section .other_features_slider {
+    padding: 40px 0;
+}
+
+
+.other_features_section .slick-dots {
+    bottom: -49px;
+}
+

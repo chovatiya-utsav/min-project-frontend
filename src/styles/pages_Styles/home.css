@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .banner_section {
     width: 100%;
     height: calc(100vh - 60px);
@@ -109,5 +114,93 @@
 
 .our_value_section .our_value_box .our_value_card {
     height: auto;
-    min-height: 210px;
+    min-height: 262px;
+}
+
+.experience_section {
+    display: block;
+    background: #0d1117;
+    padding: 0px;
+}
+
+.experience_section .experience_details {
+    display: block;
+    text-align: center;
+}
+
+.experience_section .experience_details h2 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #eee;
+    line-height: 21px;
+    max-width: 715px;
+    margin: 0 auto 80px;
+}
+
+.experience_section .experience_details .data_section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    gap: 15px;
+}
+
+.experience_section .experience_details .data_section .experience_box {
+    display: block;
+    max-width: 200px;
+}
+
+.experience_section .experience_details .data_section .experience_box h3 {
+    font-family: Epilogue;
+    font-weight: 600;
+    font-size: 50px;
+    color: #fff;
+    line-height: 51px;
+    margin: 0;
+}
+
+.experience_section .experience_details .data_section .experience_box h4 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    line-height: 21px;
+    margin: 0;
+}
+
+.experience_section .brand_trust_section {
+    display: block;
+    padding: 0px;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+
+    .experience_section {
+        padding: 50px 0;
+    }
+
+    .experience_section .experience_details h2 {
+        margin: 0 auto 50px;
+    }
+
+    .experience_section .experience_details .data_section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px 10px;
+        gap: 40px 10px;
+        margin: 0 auto 50px;
+    }
+
+    .experience_section .experience_details .data_section .experience_box {
+        margin: 0 auto;
+    }
+
+    .experience_section .experience_details .data_section .experience_box h3 {
+        font-size: 40px;
+    }
+
+    .experience_section .experience_details .data_section .experience_box h4 {
+        font-size: 14px;
+    }
 }

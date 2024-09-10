@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import RegistrationModal from '../commonComponet/RegistrationModal';
+import DisplayCaseStudies from '../commonComponet/DisplayCaseStudies';
 
 const Home = () => {
 
@@ -17,7 +18,18 @@ const Home = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                    arrows: false,
+                }
+            },]
     };
     const brandlogosettings = {
         dots: false,
@@ -56,43 +68,71 @@ const Home = () => {
 
                 </div>
             </section>
-            <section className='brand_trust_section'>
-                <div className='brand_logos_slider'>
-                    <Slider {...brandlogosettings}>
-                        <div className='monitor_img'>
-                            <img src="./images/brandstrust/slider-img-9-color.jpg" alt="slider images" width={150} height={60} />
+            <section className='experience_section'>
+                <div className='container'>
+                    <div className='experience_details'>
+                        <h2>
+                            From task assignment and tracking to communication and analytics, our platform provides a unified and efficient solution for managing your field force.
+                        </h2>
+                        <div className='data_section'>
+                            <div className='experience_box'>
+                                <h3>10+</h3>
+                                <h4>Years of Experience</h4>
+                            </div>
+                            <div className='experience_box'>
+                                <h3>400+</h3>
+                                <h4>Customers across the world</h4>
+                            </div>
+                            <div className='experience_box'>
+                                <h3>2000+</h3>
+                                <h4>Field employees tracked</h4>
+                            </div>
+                            <div className='experience_box'>
+                                <h3>300,000+</h3>
+                                <h4>Field data points collected</h4>
+                            </div>
                         </div>
-                        <div className='monitor_img'>
-                            <img src="./images/brandstrust/logo-support-elders.jpg" alt="slider images" width={150} height={60} />
-                        </div>
-                        <div className='monitor_img'>
-                            <img src="./images/brandstrust/vishesh.jpeg" alt="slider images" width={150} height={60} />
-                        </div>
-                        <div className='monitor_img'>
-                            <img src="./images/brandstrust/manan.jpeg" alt="slider images" width={150} height={60} />
-                        </div>
-                        <div className='monitor_img'>
-                            <img src="./images/brandstrust/slider-img-2-color.jpg" alt="slider images" width={150} height={60} />
-                        </div>
-                        <div className='monitor_img'>
-                            <img src="./images/brandstrust/vishesh.jpeg" alt="slider images" width={150} height={60} />
-                        </div>
-                        <div className='monitor_img'>
-                            <img src="./images/brandstrust/manan.jpeg" alt="slider images" width={150} height={60} />
-                        </div>
-                        <div className='monitor_img'>
-                            <img src="./images/brandstrust/slider-img-9-color.jpg" alt="slider images" width={150} height={60} />
-                        </div>
-                        <div className='monitor_img'>
-                            <img src="./images/brandstrust/logo-support-elders.jpg" alt="slider images" width={150} height={60} />
-                        </div>
-                        <div className='monitor_img'>
-                            <img src="./images/brandstrust/slider-img-2-color.jpg" alt="slider images" width={150} height={60} />
-                        </div>
+                    </div>
+                </div>
+                <div className='brand_trust_section'>
+                    <div className='brand_logos_slider'>
+                        <Slider {...brandlogosettings}>
+                            <div className='monitor_img'>
+                                <img src="./images/brandstrust/slider-img-9-color.jpg" alt="slider images" width={150} height={60} />
+                            </div>
+                            <div className='monitor_img'>
+                                <img src="./images/brandstrust/logo-support-elders.jpg" alt="slider images" width={150} height={60} />
+                            </div>
+                            <div className='monitor_img'>
+                                <img src="./images/brandstrust/vishesh.jpeg" alt="slider images" width={150} height={60} />
+                            </div>
+                            <div className='monitor_img'>
+                                <img src="./images/brandstrust/manan.jpeg" alt="slider images" width={150} height={60} />
+                            </div>
+                            <div className='monitor_img'>
+                                <img src="./images/brandstrust/slider-img-2-color.jpg" alt="slider images" width={150} height={60} />
+                            </div>
+                            <div className='monitor_img'>
+                                <img src="./images/brandstrust/vishesh.jpeg" alt="slider images" width={150} height={60} />
+                            </div>
+                            <div className='monitor_img'>
+                                <img src="./images/brandstrust/manan.jpeg" alt="slider images" width={150} height={60} />
+                            </div>
+                            <div className='monitor_img'>
+                                <img src="./images/brandstrust/slider-img-9-color.jpg" alt="slider images" width={150} height={60} />
+                            </div>
+                            <div className='monitor_img'>
+                                <img src="./images/brandstrust/logo-support-elders.jpg" alt="slider images" width={150} height={60} />
+                            </div>
+                            <div className='monitor_img'>
+                                <img src="./images/brandstrust/slider-img-2-color.jpg" alt="slider images" width={150} height={60} />
+                            </div>
 
-                    </Slider>
+                        </Slider>
+                    </div>
                 </div>
             </section>
+
             <section className='our_value_section'>
                 <div className='container'>
                     <h2 className='main_title'>Our <span> core values</span> help us stand out from others</h2>
@@ -126,6 +166,12 @@ const Home = () => {
 
             <DisplayIndustries />
             <Registration />
+            <section className='case_studies_section'>
+                <div className='container'>
+                    <h2 className='main_title'> Our <span> case studies </span>prove the effectiveness of our <span>key features</span></h2>
+                    <DisplayCaseStudies />
+                </div>
+            </section>
             <ClientsAboutUs />
             <FrequentlyAskedQuestions />
             <RegistrationModal ModalOpen={RegistrationModalOpen} closeModal={closeModal} appointment={appointment} />

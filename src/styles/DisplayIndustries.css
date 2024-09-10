@@ -3,6 +3,20 @@
     padding: 0px;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3e424f;
+    border-radius: 20px;
+}
+
+
 .our_target_section {
     display: block;
     padding: 80px 0;
@@ -66,7 +80,6 @@
 }
 
 .our_target_section .target_details .target_listing .target_list_box .list_details p {
-    font-family: Satoshi-regular;
     font-size: 12px;
     font-weight: 400;
     line-height: 16.2px;

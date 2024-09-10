@@ -1,0 +1,360 @@
+.case_studies_banner,
+.case_studies_banner .case_studies_inner_div {
+    display: block;
+    margin-top: 80px;
+}
+
+.container {
+    padding: 0 6.510416vw;
+}
+
+.case_studies_banner .case_studies_inner_div .case_studies_image_section {
+    display: block;
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.case_studies_banner .case_studies_inner_div .case_studies_image_section .case_studies_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(47.1% 50% at 50% 50%, rgba(13, 17, 23, .43) 38.1%, rgba(13, 17, 23, .95) 100%);
+}
+
+.case_studies_banner .case_studies_inner_div .case_studies_image_section .case_studies_logo h2 {
+    font-family: Epilogue;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 0 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.case_studies_banner .case_studies_inner_div .key_word_section {
+    display: block;
+    margin-top: 40px;
+}
+
+.company_bg_section .company_bg_inner_section {
+    display: block;
+}
+
+.company_bg_section .company_bg_inner_section .company_all_details_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.company_bg_section .company_bg_inner_section .company_all_details_section .company_img_section {
+    width: 48%;
+    height: 420px;
+    position: relative;
+}
+
+.company_bg_section .company_bg_inner_section .company_all_details_section .company_img_section img {
+    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.company_bg_section .company_bg_inner_section .company_all_details_section .company_img_section .black_shadow_div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 23, 0) 38.1%, #0d1117 100%);
+}
+
+.company_bg_section .company_bg_inner_section .company_all_details_section .company_details_section {
+    width: 48%;
+}
+
+.company_bg_section .company_bg_inner_section .company_all_details_section .company_details_section h2 {
+    font-family: Epilogue;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 0 0 30px;
+    color: #fff;
+}
+
+.company_bg_section .company_bg_inner_section .company_all_details_section .company_details_section p:last-child {
+    margin: 0;
+}
+
+.company_bg_section .company_bg_inner_section .company_all_details_section .company_details_section p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 16px;
+    color: #797979;
+}
+
+.company_bg_section .company_bg_inner_section .problem_statement_section {
+    display: block;
+    padding: 60px 0;
+}
+
+.company_bg_section .company_bg_inner_section .problem_statement_section h2 {
+    font-family: Epilogue;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #fff;
+    margin: 0 0 30px;
+}
+
+.company_bg_section .company_bg_inner_section .problem_statement_section p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #797979;
+    margin: 0 0 16px;
+}
+
+.company_bg_section .company_bg_inner_section .problem_statement_section .problem_statements {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.company_bg_section .company_bg_inner_section .problem_statement_section .problem_statements .box_of_number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .1) .39%, hsla(0, 0%, 60%, .1) 100.39%), #0d1117;
+}
+
+.company_bg_section .company_bg_inner_section .problem_statement_section .problem_statements .box_of_number h6 {
+    margin: 0;
+    background: linear-gradient(90deg, #b721ff, #21d4fd);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: Epilogue;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36.9px;
+}
+
+.company_bg_section .company_bg_inner_section .problem_statement_section .problem_statements .problem_state {
+    display: block;
+    width: calc(100% - 66px);
+}
+
+.company_bg_section .company_bg_inner_section .problem_statement_section .problem_statements .problem_state h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #fff;
+    margin: 0 0 4px;
+}
+
+.company_bg_section .company_bg_inner_section .problem_statement_section .problem_statements .problem_state p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #797979;
+    margin: 0;
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box .let_box {
+    width: 48%;
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box .let_box h2 {
+    font-family: Epilogue;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #fff;
+    margin: 0 0 30px;
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box .let_box p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #797979;
+    margin: 0 0 16px;
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box .let_box .box_for_number {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box .let_box .box_for_number .box_of_number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .1) .39%, hsla(0, 0%, 60%, .1) 100.39%), #0d1117;
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box .let_box .box_for_number .box_of_number h6 {
+    margin: 0;
+    background: linear-gradient(90deg, #b721ff, #21d4fd);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: Epilogue;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36.9px;
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box .let_box .box_for_number .details_of_box {
+    display: block;
+    width: calc(100% - 66px);
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box .let_box .box_for_number .details_of_box h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #fff;
+    margin: 0 0 4px;
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box .let_box .box_for_number .details_of_box p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #797979;
+    margin: 0;
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box .right_box {
+    width: 48%;
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box .right_box img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.company_bg_section .company_bg_inner_section .two_section_box.reverse_boxes {
+    flex-direction: row-reverse;
+}
+
+.company_bg_section .company_bg_inner_section .two_section_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.company_bg_section .company_bg_inner_section .summery_section {
+    display: block;
+}
+
+.company_bg_section .company_bg_inner_section .summery_section h2 {
+    font-family: Epilogue;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #fff;
+    margin: 0 0 30px;
+}
+
+.company_bg_section .company_bg_inner_section .summery_section p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #797979;
+    margin: 0 0 16px;
+}
+
+.company_bg_section {
+    display: block;
+    padding: 80px 0;
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .company_bg_section .company_bg_inner_section .company_all_details_section {
+        display: block;
+    }
+
+    .company_bg_section .company_bg_inner_section .problem_statement_section {
+        padding: 50px 0;
+    }
+
+    .company_bg_section .company_bg_inner_section .two_section_box {
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        flex-direction: column-reverse;
+    }
+
+    .company_bg_section .company_bg_inner_section .company_all_details_section .company_img_section {
+        max-height: 230px !important;
+    }
+
+    .company_bg_section .company_bg_inner_section .company_all_details_section .company_img_section img {
+        object-fit: cover;
+    }
+
+    .company_bg_section .company_bg_inner_section .company_all_details_section .company_img_section {
+        max-height: 230px !important;
+    }
+
+    .company_bg_section .company_bg_inner_section .company_all_details_section .company_details_section {
+        width: 100%;
+        margin: 24px 0 0;
+    }
+
+    .company_bg_section .company_bg_inner_section .company_all_details_section .company_img_section {
+        width: 100%;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(13, 17, 23, 0) 38.1%, #0d1117 100%);
+    }
+
+    .company_bg_section .company_bg_inner_section .two_section_box .let_box {
+        width: 100%;
+    }
+
+    .company_bg_section .company_bg_inner_section .two_section_box .right_box {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .company_bg_section .company_bg_inner_section .two_section_box .right_box {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .company_bg_section .company_bg_inner_section .two_section_box.reverse_boxes {
+        flex-direction: column-reverse;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+}

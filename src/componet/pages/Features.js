@@ -6,6 +6,7 @@ import Registration from './Registration';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import DisplayCaseStudies from '../commonComponet/DisplayCaseStudies';
 
 function Features() {
   const settings = {
@@ -16,7 +17,28 @@ function Features() {
     autoplay: true,
     speed: 3000,
     autoplaySpeed: 1,
-    cssEase: "linear"
+    cssEase: "linear",
+
+  };
+
+  const Otherfeaturessettings = {
+    dots: true,
+    infinite: true,
+    speed: 4000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 990,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          arrows: false,
+        }
+      },]
   };
   return (
     <div>
@@ -28,8 +50,8 @@ function Features() {
           </div>
         </div>
         <div className='bottom_img'>
-            <img src="./images/Features/feature-bottom-img.png" alt="" />
-          </div>
+          <img src="./images/Features/feature-bottom-img.png" alt="" />
+        </div>
       </section>
       <section className='expand_section'>
         <div className='container'>
@@ -189,6 +211,51 @@ function Features() {
           </div>
         </div>
       </section>
+      <section className='other_features_section'>
+        <div className='container'>
+          <h2 className='main_title'>Other <span> features </span></h2>
+          <div className='other_features_slider'>
+            <Slider {...Otherfeaturessettings}>
+              <div className='features_card'>
+                <img
+                  src="./images/otherfeatures/feature-img-1.jpg"
+                  alt="feature images"
+                  className='feature_main_img'
+                  width={360}
+                  height={220} />
+                <div className='features_details'>
+                  <h2>Data Collection</h2>
+                  <p>Custom form for ease in data collection can be set up as per your business requirement.</p>
+                </div>
+              </div>
+              <div className='features_card'>
+                <img
+                  src="./images/otherfeatures/feature-img-2.jpg"
+                  alt="feature images"
+                  className='feature_main_img'
+                  width={360}
+                  height={220} />
+                <div className='features_details'>
+                  <h2>Map Visualisation</h2>
+                  <p>Live Location Tracking. Identify the current location of the field executive and the route taken.</p>
+                </div>
+              </div>
+              <div className='features_card'>
+                <img
+                  src="./images/otherfeatures/feature-img-3.jpg"
+                  alt="feature images"
+                  className='feature_main_img'
+                  width={360}
+                  height={220} />
+                <div className='features_details'>
+                  <h2>Attendance & Authentication</h2>
+                  <p>Idle/ Moving Tracking. Know the current status of your field executive - whether the person is 'On Duty' or 'Off Duty'.</p>
+                </div>
+              </div>
+            </Slider>
+          </div>
+        </div>
+      </section>
       <section className='brand_trust_section'>
         <h2 className='main_title'>Several <span> brands trust </span>our product</h2>
         <div className='brand_logos_slider'>
@@ -223,8 +290,13 @@ function Features() {
             <div className='monitor_img'>
               <img src="./images/brandstrust/slider-img-2-color.jpg" alt="slider images" width={150} height={60} />
             </div>
-
           </Slider>
+        </div>
+      </section>
+      <section className='case_studies_section'>
+        <div className='container'>
+          <h2 className='main_title'> Our <span> case studies </span>prove the effectiveness of our <span>key features</span></h2>
+          <DisplayCaseStudies />
         </div>
       </section>
       <Registration />

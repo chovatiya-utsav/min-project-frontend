@@ -58,7 +58,7 @@
 }
 
 .about_us_details_section .container .about_us_card .user_details_section .user_icon img {
-    background: linear-gradient(90deg, #b721ff, #21d4fd);
+    background: linear-gradient(90deg, rgba(183, 33, 255, .2) 6.12%, rgba(33, 212, 253, .2) 61.75%);
     border-radius: 50%;
     margin: 0px;
 }
