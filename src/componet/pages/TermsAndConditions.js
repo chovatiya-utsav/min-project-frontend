@@ -4,8 +4,8 @@ import '../../styles/pages_Styles/termsAndConditions.css'
 function TermsAndConditions() {
     return (
         <div>
-            <section class="content_of_policy">
-                <div class="container">
+            <section className="content_of_policy">
+                <div className="container">
                     <h1>Terms &amp; Conditions</h1>
                     <h2>Intelomatic</h2>
                     <h3>Introduction</h3>

@@ -60,8 +60,13 @@ function IndustriesDetails() {
     } catch (error) {
       console.error('Error delete image:', error);
     }
-
+    
   };
+  
+  const editData = (name,id) => {
+   console.log(name,id)
+
+  }
 
 
   return (
@@ -78,6 +83,7 @@ function IndustriesDetails() {
                   <th>industriesName</th>
                   <th>Date</th>
                   <th>Delete</th>
+                  <th>Update</th>
                 </tr>
               </thead>
               <tbody>
@@ -118,12 +124,23 @@ function IndustriesDetails() {
                                 height={20} />
                             </button>
                           </td>
+                          <td className='delete_button'>
+                            <button
+                              onClick={() => editData(data?.title, data?._id)}>
+                              <img
+                                src="./images/useruserdetails/edit.png"
+                                alt="delete icone"
+                                className='edit_image'
+                                width={20}
+                                height={20} />
+                            </button>
+                          </td>
                         </tr>
                       );
                     })
                     :
                     <tr>
-                      <td >no appointment</td>
+                      <td colSpan={6}>no appointment</td>
                     </tr>
                 }
 

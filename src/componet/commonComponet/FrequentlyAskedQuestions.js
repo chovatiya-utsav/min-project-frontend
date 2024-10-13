@@ -10,7 +10,7 @@ const FrequentlyAskedQuestions = () => {
     const faq = [
         {
             question: "What can you help me with?",
-            anser: "Our Intelomatic application can track your on-field employees on a real time basis and also calculate the distance travelled by the employee to perform tasks in the field. We can set you up instantly."
+            anser: "Our business transformations application can track your on-field employees on a real time basis and also calculate the distance travelled by the employee to perform tasks in the field. We can set you up instantly."
         },
         {
             question: "Why should I choose you and not hire my own software development team?",
@@ -26,7 +26,7 @@ const FrequentlyAskedQuestions = () => {
         },
         {
             question: "What is Intelomatic/map based intelligence?",
-            anser: "Intelomatic is an on-field worker management software which primarily enables you to track your on-field employees. You can organize your field force, customers, competition and business data on maps to increase sales, lower costs and expand profits for your business."
+            anser: "business transformations is an on-field worker management software which primarily enables you to track your on-field employees. You can organize your field force, customers, competition and business data on maps to increase sales, lower costs and expand profits for your business."
         },
         {
             question: "How do I know which is the right solution for me/my business?",
