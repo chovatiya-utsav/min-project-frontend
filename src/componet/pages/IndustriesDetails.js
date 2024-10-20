@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import '../../styles/pages_Styles/industriesDetails.css'
 import { Modal } from 'react-bootstrap';
 import moment from 'moment';
-import axios from 'axios'
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function IndustriesDetails() {
 
@@ -16,7 +17,9 @@ function IndustriesDetails() {
 
   useEffect(() => {
     getindustriesdetails();
-  }, [])
+  }, []);
+
+  const navigate = useNavigate();
 
   const getindustriesdetails = async () => {
     const userDetails = await fetch("http://localhost:5000/api/display", {
@@ -60,12 +63,12 @@ function IndustriesDetails() {
     } catch (error) {
       console.error('Error delete image:', error);
     }
-    
-  };
-  
-  const editData = (name,id) => {
-   console.log(name,id)
 
+  };
+
+  const editData = (data) => {
+    // console.log(data);
+    navigate('/Industries', { state: { industryData: data } });
   }
 
 
@@ -126,7 +129,7 @@ function IndustriesDetails() {
                           </td>
                           <td className='delete_button'>
                             <button
-                              onClick={() => editData(data?.title, data?._id)}>
+                              onClick={() => editData(data)}>
                               <img
                                 src="./images/useruserdetails/edit.png"
                                 alt="delete icone"

@@ -1,9 +1,10 @@
 import { Field, Form, Formik } from 'formik';
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../../styles/addIndustries.css';
 import * as Yup from 'yup';
 import axios from 'axios';
 import AddIndustriesDataBaseResponseModal from './AddIndustriesDataBaseResponseModal';
+import { useLocation } from 'react-router-dom';
 
 const AddIndustries = () => {
     const [industriesImageurlError, setindustriesImageurlError] = useState(null);
@@ -12,6 +13,7 @@ const AddIndustries = () => {
     const [response, setResponse] = useState(false);
     const [modalContent, setModalContent] = useState(null);
     const [industriesName, setIndustriesName] = useState(null);
+    const [editData, setEditData] = useState(null);
 
     const handleAutoResize = (e) => {
         e.target.style.height = 'auto'; // Reset height
@@ -20,6 +22,16 @@ const AddIndustries = () => {
 
     const fileRef = useRef();
 
+    const location = useLocation();
+    const industryData = location.state?.industryData;
+    useEffect(() => {
+        if (industryData) {
+            setEditData(industryData); // Populate form with edit data if present
+            setindustriesImageurl(`http://localhost:5000/public/image/${industryData.indestryImage}`); // Set image for editing
+        }
+    }, [industryData]);
+
+    console.log(editData)
 
     const fileUploadFolderHandle = async (event) => {
         const file = event.target.files[0];
@@ -66,9 +78,9 @@ const AddIndustries = () => {
             <Formik
                 initialValues={
                     {
-                        industriesTitle: '',
-                        industriesTitleDetail: '',
-                        industriesImageurl: fileObject
+                        industriesTitle: industryData ? industryData?.title : '', // Populate title if editing
+                        industriesTitleDetail: industryData ? industryData?.description : '', // Populate description if editing
+                        industriesImageurl: fileObject || '' // Handle image file
                     }}
                 validationSchema={validationSchema}
                 validate={(values) => {
@@ -88,29 +100,47 @@ const AddIndustries = () => {
                     console.log(formData);
 
                     try {
-                        const response = await axios.post('http://localhost:5000/api/upload', formData, {
-                            headers: {
-                                'Content-Type': 'multipart/form-data',
-                            },
-                        });
-                        console.log(response.data);
-                        const data = await response.data;
-                        console.log("exists", data);
-                        if (data.status === 403) {
-                            console.log('s', data.msg)
-                            toggalModal("Industry already exists", values.industriesTitle);
-                            actions.resetForm();
-                            setindustriesImageurl(null); // Reset the image preview
-                            setFileObject(null); // Reset the file object
+                        if (editData) {
+                            // If editing, make a PUT request to update the existing industry
+                            const response = await axios.put(`http://localhost:5000/api/update/${editData._id}`, formData, {
+                                headers: {
+                                    'Content-Type': 'multipart/form-data',
+                                },
+                            });
+                            console.log(response);
+                            const data = await response.data;
+                            console.log("response", data)
 
-                        } else {
                             console.log("successfully", data);
                             toggalModal("Industry successfully submited", values.industriesTitle);
                             actions.resetForm();
                             setindustriesImageurl(null); // Reset the image preview
                             setFileObject(null); // Reset the file object
-                        }
 
+                        } else {
+                            const response = await axios.post('http://localhost:5000/api/upload', formData, {
+                                headers: {
+                                    'Content-Type': 'multipart/form-data',
+                                },
+                            });
+                            console.log(response.data);
+                            const data = await response.data;
+                            console.log("exists", data);
+                            if (data.status === 403) {
+                                console.log('s', data.msg)
+                                toggalModal("Industry already exists", values.industriesTitle);
+                                actions.resetForm();
+                                setindustriesImageurl(null); // Reset the image preview
+                                setFileObject(null); // Reset the file object
+
+                            } else {
+                                console.log("successfully", data);
+                                toggalModal("Industry successfully submited", values.industriesTitle);
+                                actions.resetForm();
+                                setindustriesImageurl(null); // Reset the image preview
+                                setFileObject(null); // Reset the file object
+                            }
+                        }
 
                     } catch (error) {
                         console.error('Error uploading image:', error);
@@ -136,7 +166,8 @@ const AddIndustries = () => {
                             name="industriesTitle"
                             className='IndustriesTitle'
                             onChange={handleChange}
-                            value={values.industriesTitle} />
+                            value={values.industriesTitle}
+                        />
                         {errors.industriesTitle && touched.industriesTitle && <span className='error'>{errors.industriesTitle}</span>}
                         <label >upload a picture showcasing your business :</label>
                         {/* {errors.CaseStudyTitleImage && touched.CaseStudyTitleImage && <span className='error'>{errors.CaseStudyTitleImage}</span>} */}
@@ -169,12 +200,15 @@ const AddIndustries = () => {
                             as="textarea"
                             name="industriesTitleDetail"
                             className='industriesTitleDetail'
-                            onInput={handleAutoResize} />
+                            onInput={handleAutoResize}
+                            value={values.industriesTitleDetail}
+                        />
 
                         {errors.industriesTitleDetail && touched.industriesTitleDetail && <span className='error'>{errors.industriesTitleDetail}</span>}
 
                         <button type="submit" >
-                            add industries
+                            {editData ? "Update industries" : "add industries"}
+
                         </button>
                     </Form>
                 )}

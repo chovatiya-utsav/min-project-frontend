@@ -1,10 +1,20 @@
 import React from 'react'
 import { Modal } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom';
 
 function AddIndustriesDataBaseResponseModal(props) {
 
     const { open, toggalModal, modalContent, industriesName } = props;
 
+    const navigate = useNavigate();
+
+    const riderect = () => {
+        if (modalContent === "Industry already exists") {
+        } else {
+            navigate("/Home")
+        }
+
+    }
 
     return (
         <div>
@@ -45,7 +55,7 @@ function AddIndustriesDataBaseResponseModal(props) {
                 </Modal.Body>
                 <Modal.Footer>
                     <div className='schedule_form_button btn_ok'>
-                        <button className='btn btn-default' onClick={() => toggalModal()}>ok</button>
+                        <button className='btn btn-default' onClick={() => riderect()}>ok</button>
                     </div>
 
                 </Modal.Footer>
