@@ -10,6 +10,7 @@ function AddIndustriesDataBaseResponseModal(props) {
 
     const riderect = () => {
         if (modalContent === "Industry already exists") {
+            toggalModal();
         } else {
             navigate("/Home")
         }
